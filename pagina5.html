@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subespacios Vectoriales</title>
+    <link rel="stylesheet" href="EstilosCss/Estilo5.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Subespacios Vectoriales</h1>
+    </header>
+
+    <main class="content">
+        <section>
+            <h2>¿Qué es un Subespacio Vectorial?</h2>
+            <p>
+                Un <strong>subespacio vectorial</strong> de un espacio vectorial \( V \) es cualquier subconjunto de \( V \) que cumple con tres propiedades fundamentales:
+            </p>
+            <ul>
+                <li><strong>Cerradura bajo la adición:</strong> Si \( \mathbf{u} \) y \( \mathbf{v} \) son vectores en el subespacio, entonces su suma \( \mathbf{u} + \mathbf{v} \) también debe pertenecer al subespacio.</li>
+                <li><strong>Cerradura bajo la multiplicación escalar:</strong> Si \( \mathbf{u} \) es un vector en el subespacio y \( c \) es un escalar, entonces el producto \( c \mathbf{u} \) también debe pertenecer al subespacio.</li>
+                <li><strong>Contiene el vector cero:</strong> El vector nulo \( \mathbf{0} \) debe estar en el subespacio.</li>
+            </ul>
+            <p>
+                Es decir, un subespacio vectorial es un conjunto de vectores dentro de un espacio vectorial que está cerrado bajo las operaciones de suma de vectores y multiplicación por escalares.
+            </p>
+        </section>
+
+        <section>
+            <h2>Definición Formal</h2>
+            <p>
+                Sea \( V \) un espacio vectorial sobre un campo \( F \), y sea \( W \subseteq V \) un subconjunto no vacío de \( V \). Decimos que \( W \) es un subespacio de \( V \) si satisface las siguientes tres condiciones:
+            </p>
+            <ul>
+                <li>Si \( \mathbf{u}, \mathbf{v} \in W \), entonces \( \mathbf{u} + \mathbf{v} \in W \). (Cerradura bajo la adición)</li>
+                <li>Si \( \mathbf{u} \in W \) y \( c \in F \), entonces \( c \mathbf{u} \in W \). (Cerradura bajo la multiplicación escalar)</li>
+                <li>El vector nulo \( \mathbf{0} \in W \).</li>
+            </ul>
+            <p>
+                Si estas tres condiciones se cumplen, \( W \) es un subespacio de \( V \). En caso contrario, \( W \) no es un subespacio.
+            </p>
+        </section>
+
+        <section>
+            <h2>Ejemplo de Subespacio</h2>
+            <p>
+                Consideremos el espacio vectorial \( \mathbb{R}^3 \), y el conjunto de vectores \( W = \{ \mathbf{v} \in \mathbb{R}^3 \mid v_3 = 0 \} \), es decir, los vectores del plano \( xy \).
+            </p>
+            <p>
+                Para verificar que \( W \) es un subespacio de \( \mathbb{R}^3 \), comprobamos las tres condiciones:
+            </p>
+            <ul>
+                <li>Si \( \mathbf{u} = (u_1, u_2, 0) \) y \( \mathbf{v} = (v_1, v_2, 0) \) son vectores en \( W \), su suma es \( \mathbf{u} + \mathbf{v} = (u_1 + v_1, u_2 + v_2, 0) \), que también está en \( W \).</li>
+                <li>Si \( \mathbf{u} = (u_1, u_2, 0) \) es un vector en \( W \) y \( c \) es un escalar, entonces \( c \mathbf{u} = (c u_1, c u_2, 0) \), que también está en \( W \).</li>
+                <li>El vector nulo \( \mathbf{0} = (0, 0, 0) \) está claramente en \( W \).</li>
+            </ul>
+            <p>
+                Por lo tanto, \( W \) es un subespacio de \( \mathbb{R}^3 \).
+            </p>
+        </section>
+
+        <section>
+            <h2>Subespacios Generados por un Conjunto de Vectores</h2>
+            <p>
+                Dado un conjunto de vectores \( \{ \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \} \), el subespacio generado por este conjunto de vectores, denotado por \( \text{span}(\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n) \), es el conjunto de todas las combinaciones lineales de esos vectores:
+            </p>
+            <p class="equation">
+                \[
+                \text{span}(\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n) = \{ c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + \dots + c_n \mathbf{v}_n \mid c_1, c_2, \dots, c_n \in \mathbb{R} \}.
+                \]
+            </p>
+            <p>
+                Este conjunto es un subespacio de \( \mathbb{R}^n \) porque cumple con las tres condiciones mencionadas: cerradura bajo adición, cerradura bajo multiplicación escalar y contiene el vector nulo.
+            </p>
+        </section>
+
+        <section>
+            <h2>Propiedades de los Subespacios</h2>
+            <p>
+                Los subespacios tienen varias propiedades importantes, entre ellas:
+            </p>
+            <ul>
+                <li><strong>El subespacio generado por un conjunto vacío:</strong> El subespacio generado por el conjunto vacío \( \emptyset \) es el espacio trivial, es decir, el conjunto \( \{ \mathbf{0} \} \).</li>
+                <li><strong>Subespacios de subespacios:</strong> Los subespacios de un subespacio son también subespacios.</li>
+                <li><strong>El subespacio generado por un conjunto de vectores linealmente independientes:</strong> Es el conjunto de todas las combinaciones lineales de esos vectores.</li>
+            </ul>
+        </section>
+
+        <section class="back">
+            <p>Regresa al <a href="index.html">directorio de preguntas</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Álgebra Lineal - Subespacios Vectoriales</p>
+    </footer>
+</body>
+</html>

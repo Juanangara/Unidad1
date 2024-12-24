@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es un Espacio Vectorial?</title>
+    <link rel="stylesheet" href="EstilosCss/Estilos2.css">
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>¿Qué es un Espacio Vectorial?</h1>
+    </header>
+
+    <main class="content">
+        <section class="intro">
+            <p>
+                Un espacio vectorial es una estructura fundamental en álgebra lineal, formada por un conjunto de vectores y un conjunto de escalares, 
+                junto con operaciones de suma y multiplicación, que obedecen ciertos axiomas.
+            </p>
+        </section>
+
+        <section class="definition">
+            <h2>Definición Formal</h2>
+            <p>Sea \(\mathbb{K}\) un campo (por ejemplo, \(\mathbb{R}\) o \(\mathbb{C}\)) y \(V\) un conjunto no vacío. Decimos que \(V\) es un espacio vectorial sobre \(\mathbb{K}\) si existen dos operaciones:</p>
+            <ul>
+                <li>Suma de vectores: \(+: V \times V \to V\).</li>
+                <li>Multiplicación por escalares: \(\cdot: \mathbb{K} \times V \to V\).</li>
+            </ul>
+            <p>Estas operaciones deben satisfacer los siguientes axiomas:</p>
+            <div class="axioms">
+                <ol>
+                    <li>Asociatividad de la suma: \((\mathbf{u} + \mathbf{v}) + \mathbf{w} = \mathbf{u} + (\mathbf{v} + \mathbf{w})\).</li>
+                    <li>Conmutatividad de la suma: \(\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}\).</li>
+                    <li>Existencia de neutro aditivo: Existe \(\mathbf{0} \in V\) tal que \(\mathbf{v} + \mathbf{0} = \mathbf{v}\).</li>
+                    <li>Existencia de inverso aditivo: Para cada \(\mathbf{v} \in V\), existe \(-\mathbf{v} \in V\) tal que \(\mathbf{v} + (-\mathbf{v}) = \mathbf{0}\).</li>
+                    <li>Distributividad escalar: \(a \cdot (\mathbf{u} + \mathbf{v}) = a \cdot \mathbf{u} + a \cdot \mathbf{v}\).</li>
+                    <li>Distributividad sobre escalares: \((a + b) \cdot \mathbf{v} = a \cdot \mathbf{v} + b \cdot \mathbf{v}\).</li>
+                    <li>Compatibilidad escalar: \((a \cdot b) \cdot \mathbf{v} = a \cdot (b \cdot \mathbf{v})\).</li>
+                    <li>Neutro escalar: \(1 \cdot \mathbf{v} = \mathbf{v}\).</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="examples">
+            <h2>Ejemplos</h2>
+            <p>Algunos ejemplos de espacios vectoriales incluyen:</p>
+            <ul>
+                <li>\(\mathbb{R}^n\): Conjunto de vectores con \(n\) componentes reales.</li>
+                <li>\(\mathbb{C}^n\): Conjunto de vectores con \(n\) componentes complejas.</li>
+                <li>Funciones continuas en un intervalo dado.</li>
+                <li>Matrices de \(m \times n\) con entradas reales o complejas.</li>
+            </ul>
+        </section>
+
+        <section class="back">
+            <p>Regresa al <a href="index.html">directorio de preguntas</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Álgebra Lineal - Unidad 1</p>
+    </footer>
+</body>
+</html>

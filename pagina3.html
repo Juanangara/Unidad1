@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es una combinación lineal y cómo se determina?</title>
+    <link rel="stylesheet" href="EstilosCss/Estilo3.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <header>
+        <h1>¿Qué es una combinación lineal y cómo se determina?</h1>
+    </header>
+
+    <main class="content">
+        <section>
+            <h2>Definición Formal de Combinación Lineal</h2>
+            <p>
+                Una <strong>combinación lineal</strong> de un conjunto de vectores es una suma de estos vectores multiplicados por escalares. Es decir, si tenemos un conjunto de vectores \( \{ \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \} \) en un espacio vectorial \( V \), una combinación lineal de estos vectores es cualquier vector que se puede escribir de la forma:
+            </p>
+            <p class="equation">
+                \[
+                \mathbf{v} = c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + \dots + c_n \mathbf{v}_n,
+                \]
+            </p>
+            <p>
+                donde \( c_1, c_2, \dots, c_n \) son escalares (también llamados coeficientes) y \( \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \) son los vectores del conjunto.
+            </p>
+            <p>
+                En otras palabras, cualquier vector \( \mathbf{v} \) que esté en el espacio generado por los vectores \( \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \) puede expresarse como una combinación lineal de estos vectores.
+            </p>
+        </section>
+
+        <section>
+            <h2>¿Qué implica que un vector sea una combinación lineal?</h2>
+            <p>
+                Un vector \( \mathbf{v} \) es una combinación lineal de un conjunto de vectores \( \{ \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \} \) si puede expresarse como una combinación de esos vectores. En otras palabras, los coeficientes \( c_1, c_2, \dots, c_n \) no son necesariamente cero, y el vector \( \mathbf{v} \) está contenido en el espacio generado por \( \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \), es decir, en el subespacio formado por ellos.
+            </p>
+            <p>
+                Si un vector no puede escribirse de esta manera, decimos que el vector no es una combinación lineal de los vectores del conjunto. En ese caso, el conjunto de vectores es <strong>linealmente independiente</strong>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Comprobación de Combinación Lineal</h2>
+            <p>
+                Para determinar si un vector \( \mathbf{v} \) es una combinación lineal de los vectores \( \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \), debemos resolver el siguiente sistema de ecuaciones:
+            </p>
+            <p>
+                Supongamos que queremos verificar si el vector \( \mathbf{v} = (v_1, v_2, \dots, v_m) \) es una combinación lineal de los vectores \( \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \). Esto implica resolver el sistema:
+            </p>
+            <p class="equation">
+                \[
+                c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + \dots + c_n \mathbf{v}_n = \mathbf{v},
+                \]
+            </p>
+            <p>
+                El sistema se puede escribir como un sistema de ecuaciones lineales en los coeficientes \( c_1, c_2, \dots, c_n \). Si existe una solución, entonces \( \mathbf{v} \) es una combinación lineal de los vectores \( \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \).
+            </p>
+            <p>
+                Si el sistema no tiene solución, entonces \( \mathbf{v} \) no es una combinación lineal de esos vectores.
+            </p>
+        </section>
+
+        <section>
+            <h2>Ejemplo Práctico</h2>
+            <p>
+                Consideremos el espacio vectorial \( \mathbb{R}^3 \) y los vectores \( \mathbf{v}_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} \), \( \mathbf{v}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \) y \( \mathbf{v}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \).
+            </p>
+            <p>
+                Queremos verificar si el vector \( \mathbf{v} = \begin{bmatrix} 3 \\ 2 \\ 5 \end{bmatrix} \) es una combinación lineal de \( \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \). Esto nos lleva al siguiente sistema de ecuaciones:
+            </p>
+            <p class="equation">
+                \[
+                c_1 \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} + c_2 \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} + c_3 \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 3 \\ 2 \\ 5 \end{bmatrix}.
+                \]
+            </p>
+            <p>
+                Esto se traduce en el siguiente sistema de ecuaciones:
+            </p>
+            <p class="equation">
+                \[
+                \begin{cases}
+                    c_1 = 3, \\
+                    c_2 = 2, \\
+                    c_3 = 5.
+                \end{cases}
+                \]
+            </p>
+            <p>
+                Por lo tanto, el vector \( \mathbf{v} \) es una combinación lineal de \( \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \), con los coeficientes \( c_1 = 3 \), \( c_2 = 2 \) y \( c_3 = 5 \).
+            </p>
+        </section>
+
+        <section>
+            <h2>Propiedades de las Combinaciones Lineales</h2>
+            <p>
+                Las combinaciones lineales tienen algunas propiedades importantes:
+            </p>
+            <ul>
+                <li><strong>Cerradura:</strong> El conjunto de todas las combinaciones lineales de un conjunto de vectores forma un subespacio vectorial.</li>
+                <li><strong>Commutatividad:</strong> Las combinaciones lineales son conmutativas, es decir, el orden de los vectores no afecta el resultado de la suma.</li>
+                <li><strong>Asociatividad:</strong> Las combinaciones lineales son asociativas, es decir, la forma en que agrupamos los vectores no cambia el resultado.</li>
+                <li><strong>Escalares:</strong> Los coeficientes escalares en una combinación lineal pueden multiplicarse por un escalar sin que se altere la validez de la combinación lineal.</li>
+            </ul>
+        </section>
+
+        <section class="back">
+            <p>Regresa al <a href="index.html">directorio de preguntas</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Álgebra Lineal - Unidad 1</p>
+    </footer>
+</body>
+</html>

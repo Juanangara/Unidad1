@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dependencia e Independencia Lineal</title>
+    <link rel="stylesheet" href="EstilosCss/Estilos4.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dependencia e Independencia Lineal</h1>
+    </header>
+
+    <main class="content">
+        <section>
+            <h2>¿Qué es la Dependencia Lineal?</h2>
+            <p>
+                Dado un conjunto de vectores \( \{ \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \} \), decimos que estos vectores son <strong>dependientes lineales</strong> si existe una combinación lineal no trivial de estos vectores que sea igual al vector nulo \( \mathbf{0} \).
+            </p>
+            <p>
+                Formalmente, los vectores \( \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \) son dependientes lineales si existen escalares \( c_1, c_2, \dots, c_n \) (no todos cero) tales que:
+            </p>
+            <p class="equation">
+                \[
+                c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + \dots + c_n \mathbf{v}_n = \mathbf{0}
+                \]
+            </p>
+            <p>
+                Si esta ecuación tiene una solución no trivial (es decir, con al menos un \( c_i \neq 0 \)), los vectores son dependientes lineales. En otras palabras, uno o más vectores del conjunto pueden ser escritos como combinaciones lineales de los otros.
+            </p>
+            <h3>Ejemplo de Dependencia Lineal</h3>
+            <p>
+                Consideremos tres vectores en \( \mathbb{R}^3 \):
+            </p>
+            <p class="equation">
+                \[
+                \mathbf{v}_1 = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}, \quad \mathbf{v}_2 = \begin{pmatrix} 2 \\ 4 \\ 6 \end{pmatrix}, \quad \mathbf{v}_3 = \begin{pmatrix} 3 \\ 6 \\ 9 \end{pmatrix}
+                \]
+            </p>
+            <p>
+                Si observamos, podemos ver que \( \mathbf{v}_2 = 2\mathbf{v}_1 \) y \( \mathbf{v}_3 = 3\mathbf{v}_1 \), por lo tanto, los vectores son dependientes lineales. Es decir, \( \mathbf{v}_2 \) y \( \mathbf{v}_3 \) son combinaciones lineales de \( \mathbf{v}_1 \). Esto significa que podemos escribir la combinación lineal:
+            </p>
+            <p class="equation">
+                \[
+                2\mathbf{v}_1 - \mathbf{v}_2 = \mathbf{0} \quad \text{y} \quad 3\mathbf{v}_1 - \mathbf{v}_3 = \mathbf{0}
+                \]
+            </p>
+        </section>
+
+        <section>
+            <h2>¿Qué es la Independencia Lineal?</h2>
+            <p>
+                En contraste, un conjunto de vectores es <strong>independiente linealmente</strong> si la única manera en que una combinación lineal de estos vectores puede resultar en el vector nulo \( \mathbf{0} \) es si todos los coeficientes de la combinación son cero.
+            </p>
+            <p>
+                Formalmente, un conjunto de vectores \( \{ \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \} \) es independiente linealmente si la única solución al siguiente sistema de ecuaciones es \( c_1 = c_2 = \dots = c_n = 0 \):
+            </p>
+            <p class="equation">
+                \[
+                c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + \dots + c_n \mathbf{v}_n = \mathbf{0}
+                \]
+            </p>
+            <p>
+                Esto significa que no existe ninguna combinación no trivial de estos vectores que produzca el vector nulo.
+            </p>
+            <h3>Ejemplo de Independencia Lineal</h3>
+            <p>
+                Consideremos los siguientes tres vectores en \( \mathbb{R}^3 \):
+            </p>
+            <p class="equation">
+                \[
+                \mathbf{u}_1 = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad \mathbf{u}_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad \mathbf{u}_3 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+                \]
+            </p>
+            <p>
+                Estos vectores son claramente independientes lineales. No existe ninguna combinación no trivial de ellos que pueda producir el vector nulo \( \mathbf{0} \). Cualquier combinación lineal de estos vectores que dé como resultado el vector nulo debe tener los coeficientes \( c_1, c_2, c_3 \) iguales a cero:
+            </p>
+            <p class="equation">
+                \[
+                c_1 \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + c_2 \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} + c_3 \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}
+                \]
+            </p>
+            <p>
+                La única solución es \( c_1 = c_2 = c_3 = 0 \), lo que demuestra que estos vectores son independientes lineales.
+            </p>
+        </section>
+
+        <section>
+            <h2>Dependencia e Independencia Lineal en la Práctica</h2>
+            <p>
+                Para entender mejor cómo verificar la dependencia o independencia lineal de un conjunto de vectores, podemos utilizar herramientas algebraicas y geométricas.
+            </p>
+            <h3>Verificación mediante Sistemas de Ecuaciones Lineales</h3>
+            <p>
+                Como se mencionó, si un conjunto de vectores \( \{ \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \} \) es dependiente linealmente, entonces existe una combinación lineal no trivial de estos vectores que da como resultado el vector nulo. Esto se puede verificar resolviendo el siguiente sistema de ecuaciones:
+            </p>
+            <p class="equation">
+                \[
+                c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + \dots + c_n \mathbf{v}_n = \mathbf{0}
+                \]
+            </p>
+            <p>
+                Si el sistema tiene una solución no trivial (es decir, con algún \( c_i \neq 0 \)), los vectores son dependientes. Si solo la solución trivial \( c_1 = c_2 = \dots = c_n = 0 \) es válida, los vectores son independientes.
+            </p>
+            <h3>Verificación mediante Determinantes</h3>
+            <p>
+                Otra manera de verificar la dependencia e independencia lineal es utilizando matrices. Si formamos una matriz con los vectores como columnas (si el número de vectores es igual a la dimensión del espacio) y calculamos su determinante:
+            </p>
+            <p class="equation">
+                \[
+                \text{det}(\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n)
+                \]
+            </p>
+            <p>
+                Si el determinante es distinto de cero, los vectores son independientes lineales. Si el determinante es cero, los vectores son dependientes lineales.
+            </p>
+        </section>
+
+        <section class="back">
+            <p>Regresa al <a href="index.html">directorio de preguntas</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Álgebra Lineal - Dependencia e Independencia Lineal</p>
+    </footer>
+</body>
+</html>
