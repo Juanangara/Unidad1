@@ -1,0 +1,73 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+a:hover {
+    color: #45a049;
+}
+
+/* Estilo del directorio de preguntas */
+.directory {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.directory h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.directory ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.directory li {
+    margin: 10px 0;
+}
+
+.directory a {
+    display: block;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.directory a:hover {
+    background-color: #45a049;
+}

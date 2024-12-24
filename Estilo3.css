@@ -1,0 +1,68 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f1f2;
+    color: #2c3e50;
+    line-height: 1.8;
+}
+
+header {
+    background: #3498db;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+}
+
+.content {
+    padding: 20px;
+    max-width: 850px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #3498db;
+}
+
+h2, h3 {
+    color: #3498db;
+}
+
+.equation {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    font-style: italic;
+    color: #2c3e50;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 1rem;
+    background: #3498db;
+    color: white;
+}
